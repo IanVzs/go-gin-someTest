@@ -1,8 +1,10 @@
 # Go Gin Example [![rcard](https://goreportcard.com/badge/github.com/EDDYCJY/go-gin-example)](https://goreportcard.com/report/github.com/EDDYCJY/go-gin-example) [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/EDDYCJY/go-gin-example) [![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/EDDYCJY/go-gin-example/master/LICENSE)
 
 An example of gin contains many useful features
+fork from https://github.com/eddycjy/go-gin-example, but in my plan it will be a experimental product. So i create it not by click `fork`.
+Lord bless.
 
-[简体中文](https://github.com/EDDYCJY/go-gin-example/blob/master/README_ZH.md)
+[简体中文](https://github.com/IanVzs/go-gin-someTest/blob/main/README_ZH.md)
 
 ## Installation
 ```
