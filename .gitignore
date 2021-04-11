@@ -19,3 +19,6 @@ go-gin-someTest
 
 # config
 *.ini
+
+# runtime files
+runtime/
