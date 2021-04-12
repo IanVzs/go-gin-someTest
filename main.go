@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 
@@ -41,8 +42,8 @@ func main() {
 	server := &http.Server{
 		Addr:           endPoint,
 		Handler:        routersInit,
-		ReadTimeout:    readTimeout,
-		WriteTimeout:   writeTimeout,
+		ReadTimeout:    readTimeout * time.Second,
+		WriteTimeout:   writeTimeout * time.Second,
 		MaxHeaderBytes: maxHeaderBytes,
 	}
 
