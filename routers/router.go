@@ -28,7 +28,9 @@ func InitRouter() *gin.Engine {
 	r.StaticFS("/qrcode", http.Dir(qrcode.GetQrCodeFullPath()))
 
 	r.POST("/auth", api.GetAuth)
-	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	// r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	// NAME_OF_ENV_VARIABLE 环境变量赋任意值都可禁用接口文档
+	r.GET("/swagger/*any", ginSwagger.DisablingWrapHandler(swaggerFiles.Handler, "NAME_OF_ENV_VARIABLE"))
 	r.POST("/upload", api.UploadImage)
 
 	apiv1 := r.Group("/api/v1")
