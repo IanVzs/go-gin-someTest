@@ -9,6 +9,7 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 
+	"github.com/IanVzs/go-gin-example/middleware/cors"
 	"github.com/IanVzs/go-gin-example/middleware/jwt"
 	"github.com/IanVzs/go-gin-example/pkg/export"
 	"github.com/IanVzs/go-gin-example/pkg/qrcode"
@@ -35,6 +36,7 @@ func InitRouter() *gin.Engine {
 
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(jwt.JWT())
+	apiv1.Use(cors.Cors())
 	{
 		//获取标签列表
 		apiv1.GET("/tags", v1.GetTags)
